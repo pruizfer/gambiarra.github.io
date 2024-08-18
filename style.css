@@ -1,0 +1,263 @@
+/* Configurable */
+:root {
+    --mainPadding: 20px;
+
+    --topBarSize: 30px;
+    --bottomBarGap: 10px;
+    
+    --topBarChildrenSize: 30px;
+
+    --sideFrameSize: 150px;
+
+    /* Colors */
+    --bodyColor: rgb(20, 20, 20);
+
+    --textColor: white;
+
+    --MainColor: rgb(40, 40, 40);
+    --HoverColor: rgb(20, 20, 20);
+    --BorderColor: rgb(80, 80, 80);
+}
+
+.text {
+    color: var(--textColor);
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.input {
+    background-color: var(--MainColor);
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--BorderColor);
+
+    box-shadow: none;
+}
+
+.input:hover {
+    background-color: var(--HoverColor);
+}
+
+.imagebutton {
+    aspect-ratio: 1;
+    height: 20px;
+}
+
+/* ------------ */
+/*     MAIN     */
+/* ------------ */
+
+/* MAIN */
+body {
+    padding: var(--mainPadding);
+
+    background-color: var(--bodyColor);
+    outline: thick double rgb(30, 30, 30);
+
+    background-attachment: fixed;
+
+    height: calc(100vh - 3*var(--mainPadding));
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    align-self: center;
+}
+
+/* TOPBAR */
+#topbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bottomBarGap);
+
+    height: var(--topBarSize);
+    width: 100%;
+}
+
+/* link */
+#linkinput {
+    height: 22px;
+    width: 350px;
+}
+
+#confirmbutton {
+    height: 25px;
+}
+
+#linkcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bottomBarGap);
+
+    height: 100%;
+    width: calc(100% - var(--sideFrameSize));
+}
+
+/* search */
+#searchcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bottomBarGap);
+
+    height: 100%;
+    width: var(--sideFrameSize);
+}
+
+/* BOTTOMBAR */
+#bottombar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    /* Window size - TopBarSize - Gap */
+    height: 100%;
+    width: 100%;
+}
+
+/* video */
+#videocontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: calc(100% - var(--sideFrameSize));
+
+    border-style: solid;
+    border-color: var(--BorderColor);
+    border-width: 1px;
+}
+
+/* history */
+#historycontainer {
+    padding: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    gap: 10px;
+
+    height: 100%;
+    width: var(--sideFrameSize);
+
+    border-style: solid;
+    border-color: var(--BorderColor);
+    border-width: 1px;
+}
+
+#history-topbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    height: 20px;
+    width: 100%;
+}
+
+#history-list {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    gap: 10px;
+
+    overflow: auto;
+}
+
+#history-label {
+    height: 20px;
+    width: 100%;
+
+    text-align: left;
+}
+
+#historybutton {
+    aspect-ratio: 16/9;
+    width: 110px;
+
+    border: solid;
+    border-width: 1px;
+
+    /* Acts as if it was hidden */
+    border-color: var(--bodyColor);
+
+    background-size: cover;
+    object-fit: cover;
+}
+#historybutton:hover {
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+}
+
+
+
+
+/* ------------ */
+/*     HELP     */
+/* ------------ */
+
+#helplist {
+    height: 100%;
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    padding: 5px;
+    gap: 50px;
+
+    overflow: auto;
+}
+
+#helpimage {
+    width: 100%;
+
+    background-size: cover;
+    object-fit: cover;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+}
+
+#returncontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+
+    width: 100%;
+}
