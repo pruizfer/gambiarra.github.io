@@ -38,8 +38,9 @@
     background-color: var(--HoverColor);
 
     transform-style: preserve-3d;
-    transform: rotate3d(1, 0, 0, 40deg);
+    transform: scale(1.05);
 }
+
 /* MAIN */
 body {    
     padding: var(--mainPadding);
