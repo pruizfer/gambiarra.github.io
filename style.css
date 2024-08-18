@@ -227,6 +227,13 @@ body {
 /*     HELP     */
 /* ------------ */
 
+#helpbutton {
+    opacity: 0;
+}
+#helpbutton:hover {
+    opacity: 1;
+}
+
 #helplist {
     height: 100%;
     width: 75%;
